@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 declare_id!("9F77hJsRRXs7vF9UDncZKth2r5wEPgcRkEfyoZDNQ3eK");
-const ALLOWED_MINT: &str = "GeutGuhcTYRf4rkbZmWDMEgjt5jHyJN4nHko38GJjQhv";
+const ALLOWED_MINT: &str = "HyXdVykYjcgJwgBmeMmy59QHF4HncsH1TScdH97nqJYW";
 const ADMIN: &str = "4SwgW8pqrkCi3AdEqEU9dKGfi2qb4NWWGYkCayugJfrS";
 
 mod instructions;
@@ -67,5 +67,9 @@ pub mod gamaedtech_program {
     }
     pub fn close_stats(ctx: Context<CloseStats>) -> Result<()> {
         instructions::init_stats::process_close_stats(ctx)
+    }
+
+    pub fn init_setting(ctx: Context<InitializeSetting>, governance_mint: Pubkey) -> Result<()> {
+        instructions::config::process_init_config(ctx, governance_mint)
     }
 }

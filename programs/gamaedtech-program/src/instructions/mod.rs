@@ -13,3 +13,6 @@ pub use unstake::*;
 
 pub mod init_stats;
 pub use init_stats::*;
+
+pub mod config;
+pub use config::*;

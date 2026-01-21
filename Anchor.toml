@@ -11,7 +11,7 @@ solana_program = "9F77hJsRRXs7vF9UDncZKth2r5wEPgcRkEfyoZDNQ3eK"
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Mainnet"
+cluster = "localnet"
 wallet = "authority-wallet.json"
 
 [scripts]

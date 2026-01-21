@@ -90,3 +90,16 @@ impl Space for Stats {
         + 8  // total_unclaimed_rewards
         + 1; // bump
 }
+
+// ========================= SETTING ACCOUNT =========================
+
+#[account]
+pub struct ConfigAccount {
+    pub governance_mint: Pubkey, // allowed mint to stake
+}
+
+impl Space for ConfigAccount {
+    const INIT_SPACE: usize = 8 // discriminator
+    +32 // mint address
+    + 256; //Reserve for future
+}
