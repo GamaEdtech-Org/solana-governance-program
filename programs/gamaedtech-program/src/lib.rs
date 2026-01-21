@@ -69,7 +69,11 @@ pub mod gamaedtech_program {
         instructions::init_stats::process_close_stats(ctx)
     }
 
-    pub fn init_setting(ctx: Context<InitializeSetting>, governance_mint: Pubkey) -> Result<()> {
+    pub fn claim_reward(ctx: Context<ClaimReward>) -> Result<()> {
+        instructions::reward::process_claim_reward(ctx)
+    }
+
+    pub fn init_config(ctx: Context<InitializeSetting>, governance_mint: Pubkey) -> Result<()> {
         instructions::config::process_init_config(ctx, governance_mint)
     }
 }

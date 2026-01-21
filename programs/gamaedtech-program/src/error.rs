@@ -43,4 +43,7 @@ pub enum ErrorCode {
 
     #[msg("Math Overflow")]
     MathOverflow,
+
+    #[msg("No Rewards To Claim")]
+    NoRewardsToClaim,
 }

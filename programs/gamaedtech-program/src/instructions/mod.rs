@@ -14,5 +14,8 @@ pub use unstake::*;
 pub mod init_stats;
 pub use init_stats::*;
 
+pub mod reward;
+pub use reward::*;
+
 pub mod config;
 pub use config::*;
